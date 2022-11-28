@@ -1,7 +1,6 @@
 import { useState } from 'react';
-import AllCocktails from '../all-cocktails/all-cocktails';
+import { AllCocktails, MyCocktail, FavoriteCocktails } from '..';
 import { Menu, GlobalStyle } from '../index';
-import MyCocktail from '../my-cocktails/mycocktails';
 
 const Ibiza = () => {
   const [meniu, schimbaMeniu] = useState('');
@@ -14,10 +13,10 @@ const Ibiza = () => {
     <div>
       <GlobalStyle />
       <Menu schimba={handleMenu} />
-      {meniu === 'my-cocktail' ? <MyCocktail /> : 'null'}
-      {meniu === 'all-cocktails' ? <AllCocktails /> : 'null'}
-      {meniu === 'favorite-cocktail' ? <FavoriteCocktail /> : 'null'}
       <h1>Hello drinkers and welcome to Ibiza</h1>
+      {meniu === 'my-cocktail' ? <MyCocktail /> : null}
+      {meniu === 'all-cocktails' ? <AllCocktails /> : null}
+      {meniu === 'favorite-cocktail' ? <FavoriteCocktails /> : null}
     </div>
   );
 };

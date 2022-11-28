@@ -1,3 +1,7 @@
 export { Menu } from './menu'
 export { GlobalStyle } from './global-style'
 export { Nav } from './nav'
+export { AllCocktails } from './all-cocktails'
+export { FavoriteCocktails } from './favorite-cocktails'
+export { MyCocktail } from './my-cocktails'
+export { Cocktail } from './cocktail'

@@ -1,11 +1,10 @@
-import * as S from './all-cocktail.style';
+import { Cocktail } from '../cocktail';
+import * as S from './all-cocktails.style';
 
 const AllCocktails = () => {
   return (
     <S.AllCocktails>
-      <img src='vite.svg' alt='' />
-      <dt> first </dt>
-      <dd> descriere cocktail</dd>
+      <Cocktail />
     </S.AllCocktails>
   );
 };
