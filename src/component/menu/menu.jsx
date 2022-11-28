@@ -1,12 +1,12 @@
 import { Nav } from '../nav';
 import * as S from './menu.style';
 
-const Menu = () => {
+const Menu = ({ schimba }) => {
   return (
     <S.Menu>
-      <Nav>My Cocktails</Nav>
-      <Nav>All Cocktails</Nav>
-      <Nav>Favorite Cocktails</Nav>
+      <Nav onClick={() => schimba('my-cocktail')}>My Cocktails</Nav>
+      <Nav onClick={() => schimba('favorite-cocktail')}>All Cocktails</Nav>
+      <Nav onClick={() => schimba('all-cocktails')}>Favorite Cocktails</Nav>
     </S.Menu>
   );
 };
