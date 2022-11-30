@@ -1,15 +1,42 @@
+import { useEffect, useState } from 'react';
 import * as S from './cocktail.style';
 
 const Cocktail = () => {
+  const [data, setData] = useState([]);
+
+  const randomCocktail = () => {
+    fetch('https://www.thecocktaildb.com/api/json/v1/1/random.php')
+      .then((res) => res.json())
+      .then((data) => {
+        setData(data.drinks);
+        console.log(data.drinks);
+      });
+  };
+
+  useEffect(() => {
+    randomCocktail();
+  }, []);
+
   return (
     <S.Cocktail>
-      {/* <h2>Nume Cocktail</h2>
-      <img src='vite.svg' alt='' />
-      <p>Descriere cocktail, detalii despre provienienta si alte chestii</p>
-      <ol> Primul pas in creerea cocktailului</ol>
-      <ol> Pasul doi in creerea cocktailului</ol>
-      <ol> Pasul trei in creerea cocktailului</ol>
-      <a href='www.mybar.com'>Component care duce la el insusi</a> */}
+      {data.map((cocktail) => {
+        const {
+          idDrink,
+          strDrink,
+          strCategory,
+          strDrinkThumb,
+          strInstructions,
+        } = cocktail;
+        return (
+          <div className='asta' key={idDrink}>
+            <h2>{strDrink}</h2>
+            <img src={strDrinkThumb} alt='#' />
+            <h3>{strCategory}</h3>
+            <p>{strInstructions}</p>
+            <button onClick={randomCocktail}>Random Cocktail</button>
+          </div>
+        );
+      })}
     </S.Cocktail>
   );
 };

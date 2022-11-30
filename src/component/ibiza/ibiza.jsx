@@ -18,7 +18,7 @@ const Ibiza = () => {
       {meniu === 'my-cocktail' ? <MyCocktail /> : null}
       {meniu === 'all-cocktails' ? <AllCocktails /> : null}
       {meniu === 'favorite-cocktail' ? <FavoriteCocktails /> : null}
-      <Search />
+      {/* <Search /> */}
     </div>
   );
 };

@@ -10,6 +10,7 @@ export const useSearch = (initialTerm = '') => {
       .then((results) => results.json())
       .then((data) => {
         updateList(data.drinks);
+        console.log(data.drinks)
       });
   };
 

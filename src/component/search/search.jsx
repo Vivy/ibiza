@@ -20,7 +20,7 @@ const Search = () => {
         {() => (
           <Form>
             <Field name='term' />
-            <button type='submit'> Cocktail</button>
+            <button type='submit'> Search for a Cocktail </button>
           </Form>
         )}
       </Formik>
