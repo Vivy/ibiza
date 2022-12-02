@@ -33,7 +33,9 @@ const Cocktail = () => {
             <img src={strDrinkThumb} alt='#' />
             <h3>{strCategory}</h3>
             <p>{strInstructions}</p>
-            <button onClick={randomCocktail}>Random Cocktail</button>
+            <button className='btn1' onClick={randomCocktail}>
+              Random Cocktail
+            </button>
           </div>
         );
       })}

@@ -20,3 +20,5 @@ export const useSearch = (initialTerm = '') => {
 
   return [list, setTerm]
 }
+
+//Trebuie sa fac un search ingredient si pentru componentul favorite-cocktail

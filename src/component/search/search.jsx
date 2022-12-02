@@ -18,9 +18,12 @@ const Search = () => {
         onSubmit={onSubmit}
       >
         {() => (
-          <Form>
-            <Field name='term' />
-            <button type='submit'> Search for a Cocktail </button>
+          <Form className='form'>
+            <Field name='term' className='inp' />
+            <button className='btn2' type='submit'>
+              {' '}
+              Search for a Cocktail{' '}
+            </button>
           </Form>
         )}
       </Formik>
@@ -34,7 +37,7 @@ const Search = () => {
           strInstructions,
         } = drink;
         return (
-          <div key={idDrink}>
+          <div key={idDrink} className='asta1'>
             <h2>{strDrink}</h2>
             <img
               src={strDrinkThumb}
