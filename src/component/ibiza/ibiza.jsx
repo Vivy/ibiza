@@ -13,7 +13,6 @@ const Ibiza = () => {
     <div>
       <GlobalStyle />
       <Menu schimba={handleMenu} />
-      <h1>Hello drinkers and welcome to Ibiza</h1>
       {meniu === 'my-cocktail' ? <MyCocktail /> : null}
       {meniu === 'all-cocktails' ? <AllCocktails /> : null}
       {meniu === 'favorite-cocktail' ? <FavoriteCocktails /> : null}

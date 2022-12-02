@@ -13,6 +13,10 @@ body {
   background-color: aliceblue;
 }
 
+h2, h3,p{
+  font-size: 5px;
+}
+
 
 `
 
