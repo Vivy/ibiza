@@ -9,7 +9,6 @@ export const Search = styled.div`
   .form {
     display: flex;
     gap: 10px;
-    /* height: 50px; */
   }
   .asta1 {
     display: grid;

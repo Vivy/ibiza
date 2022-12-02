@@ -25,18 +25,15 @@ const FavoriteCocktails = () => {
           </Form>
         )}
       </Formik>
-      {lista &&
-        lista.map((ing) => {
-          const { idIngredient, strIngredient, strType, strDescription } = ing;
-          return (
-            <div key={idIngredient}>
-              {/* <h2>{strIngredient}</h2> */}
-              <h3>{strType}</h3>
-              <p>{strDescription}</p>
-            </div>
-          );
-        })}
-      {/* <Cocktail /> */}
+      {lista.map((ing) => {
+        const { idIngredient, strType, strDescription } = ing;
+        return (
+          <div key={idIngredient}>
+            <h3>{strType}</h3>
+            <p>{strDescription}</p>
+          </div>
+        );
+      })}
     </S.FavoriteCocktails>
   );
 };

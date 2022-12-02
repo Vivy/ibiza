@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 
 export const MyCocktail = styled.dl`
-  /* display: grid; */
   align-items: center;
   background-color: lightblue;
   font-size: small;
