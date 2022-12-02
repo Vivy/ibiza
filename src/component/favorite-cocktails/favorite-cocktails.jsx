@@ -1,6 +1,4 @@
-import { Field, Form, Formik, setIn } from 'formik';
-import { useEffect, useState } from 'react';
-import { Cocktail } from '../cocktail';
+import { Field, Form, Formik } from 'formik';
 import * as S from './favorite-cocktails.style';
 import { useSearch } from './search-ingredient-hook';
 
@@ -27,24 +25,17 @@ const FavoriteCocktails = () => {
           </Form>
         )}
       </Formik>
-
-      {lista.map((ing) => {
-        const {
-          idDrink,
-          strDrink,
-          strCategory,
-          strDrinkThumb,
-          strInstructions,
-        } = ing;
-        return (
-          <div key={idDrink}>
-            <h2>{strDrink}</h2>
-            <img src={strDrinkThumb} alt='#' />
-            <h3>{strCategory}</h3>
-            <p>{strInstructions}</p>
-          </div>
-        );
-      })}
+      {lista &&
+        lista.map((ing) => {
+          const { idIngredient, strIngredient, strType, strDescription } = ing;
+          return (
+            <div key={idIngredient}>
+              {/* <h2>{strIngredient}</h2> */}
+              <h3>{strType}</h3>
+              <p>{strDescription}</p>
+            </div>
+          );
+        })}
       {/* <Cocktail /> */}
     </S.FavoriteCocktails>
   );

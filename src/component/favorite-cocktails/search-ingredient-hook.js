@@ -10,8 +10,8 @@ export const useSearch = (initialIngred = '') => {
     fetch(`https://www.thecocktaildb.com/api/json/v1/1/search.php?i=${ingredient}`)
       .then((rezult) => rezult.json())
       .then((data) => {
-        updateLista(data.drinks);
-        console.log(data.drinks)
+        updateLista(data.ingredients);
+        console.log(data.ingredients)
       }
       )
   }

@@ -2,18 +2,11 @@ import styled from 'styled-components';
 
 export const FavoriteCocktails = styled.dl`
   display: grid;
-  align-items: center;
   background-color: lightblue;
   font-size: small;
+  justify-content: center;
   color: red;
-  
-  dt,dd{
-    grid-column: 2/3;
-  }
-
-  img {
-    height: 100px;
-    width: 100px;
-    grid-column: 1/2;
-  }
+  text-align: center;
+  padding: 20px;
+  gap: 1rem;
 `
